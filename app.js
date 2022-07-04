@@ -17,26 +17,34 @@ function checkHandler () {
 }
 
 function  calculateProfitAndLoss(initial, quantity , current) {
-    if(current > initial) {
-        const profit = (current - initial) * quantity
-        const profitPercentage = ((profit/initial) * 100).toFixed(2);
-        showOutput.innerText = "WoW You got profit of "+ profit +  " and the percentage is " + profitPercentage
-        showOutput.style.color = '#06e933'
-        // container.style.backgroundColor = "white"
-        console.log("WoW You get profit of " + profitPercentage)
-
-    } else if (current < initial) {
-        const loss = current - initial 
-        const lossPercentage = ((loss/initial) * 100).toFixed(2);
-        showOutput.innerText = "Oh! You got loss of "  +  loss + " and the percentage is " + lossPercentage
-        console.log("Oh! You got loss of " + lossPercentage)
-        showOutput.style.color = 'red'
+    if(initial && quantity && current){
+        if(current > initial) {
+            const profit = (current - initial) * quantity
+            const profitPercentage = ((profit/initial) * 100).toFixed(2);
+            showOutput.innerText = "WoW You got profit of "+ profit +  " and the percentage is " + profitPercentage
+            showOutput.style.color = '#06e933'
+            // container.style.backgroundColor = "white"
+            console.log("WoW You get profit of " + profitPercentage)
+    
+        } else if (current < initial) {
+            const loss = current - initial 
+            const lossPercentage = ((loss/initial) * 100).toFixed(2);
+            showOutput.innerText = "Oh! You got loss of "  +  loss + " and the percentage is " + lossPercentage
+            console.log("Oh! You got loss of " + lossPercentage)
+            showOutput.style.color = 'red'
+    
+        } else{
+            showOutput.innerText =" No Pain No Gain and No Gain No Pain"
+            console.log("No Gain No Pain")
+        }
+        // console.log(initial)
+    // console.log(current)
 
     } else{
-        showOutput.innerText =" No Pain No Gain and No Gain No Pain"
-        console.log("No Gain No Pain")
+        showOutput.innerText = "Please input all fields"
+
     }
-    // console.log(initial)
-    // console.log(current)
+
+    
 }
 
