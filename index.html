@@ -11,16 +11,17 @@
     <div class="container">
         <h1>Stock Profile & Loss Calculator</h1>
         <label for="initial-price">Intial Price</label>
-        <input type="text" placeholder="Enter Initial Price Here">
+        <input type="number" id="initial-price" placeholder="Enter Initial Price Here">
 
         <label for="quantity-stock">Quantity of Stocks</label>
-        <input type="text" placeholder="Enter the Number of Stocks bought">
+        <input type="number" id="no-of-stocks" placeholder="Enter the Number of Stocks bought">
 
 
         <label for="current-price">Current Price</label>
-        <input type="text" placeholder="Enter the Current Price of the stocks">
+        <input type="number" id="current-price" placeholder="Enter the Current Price of the stocks">
 
-        <button>Tell Me!</button>
+        <button id="check-btn">Tell Me!</button>
+        <div class="output">No</div>
     </div>
 
     <script src="/app.js"></script>

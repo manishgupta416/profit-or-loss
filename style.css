@@ -2,12 +2,20 @@
     margin: 0;
     padding: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap');
+
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-color: #7c3aed;
+}
+
+body{
+    color: white;
+    font-family: 'Caveat', cursive;
 }
 
 label{
@@ -47,3 +55,8 @@ button{
     color: white;
   }
   
+  .output{
+    margin-top: 30px;
+    font-weight: bolder;
+    font-size: xx-large;
+  }
