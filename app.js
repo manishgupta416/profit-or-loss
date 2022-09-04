@@ -16,17 +16,17 @@ function checkHandler () {
 }
 
 function  calculateProfitAndLoss(initial, quantity , current) {
-    if(initial && quantity && current){
+    if(((initial) > 0 && (quantity) > 0 && (current) > 0)){
         if(current > initial) {
             const profit = (current - initial) * quantity
-            const profitPercentage = ((profit/initial) * 100).toFixed(2);
+            const profitPercentage = ((profit/(initial * quantity)) * 100).toFixed(2);
             showOutput.innerText = "Hey, You got profit of "+ profit +  " and the profit percentage is " + profitPercentage +"%"
             showOutput.style.color = '#06e933'
             //console.log("WoW You get profit of " + profitPercentage)
     
         } else if (current < initial) {
-            const loss = current - initial 
-            const lossPercentage = ((loss/initial) * 100).toFixed(2);
+            const loss = (initial - current ) * quantity
+            const lossPercentage = ((loss/(initial * quantity)) * 100).toFixed(2);
             showOutput.innerText = "Oh! You got loss of "  +  loss + " and the loss percentage is " + lossPercentage+"%"
             //console.log("Oh! You got loss of " + lossPercentage)
             showOutput.style.color = 'red'
@@ -37,7 +37,8 @@ function  calculateProfitAndLoss(initial, quantity , current) {
         }
 
     } else{
-        showOutput.innerText = "Please input all fields"
+        showOutput.innerText = "Please input all fields and (values must be numbers >0)"
+        showOutput.style.color = 'white'
 
     }
 }
